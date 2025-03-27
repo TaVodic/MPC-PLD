@@ -1,7 +1,7 @@
-----------------------------------------------------------------------------------
+--
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-----------------------------------------------------------------------------------
+--
 ENTITY rp_top IS
   PORT (
     CLK             : IN  STD_LOGIC;
@@ -12,9 +12,9 @@ ENTITY rp_top IS
     DISP_DIG        : OUT STD_LOGIC_VECTOR (4 DOWNTO 0)
   );
 END rp_top;
-----------------------------------------------------------------------------------
+--
 ARCHITECTURE Structural OF rp_top IS
-----------------------------------------------------------------------------------
+--
 
   COMPONENT seg_disp_driver
   PORT (
@@ -30,7 +30,7 @@ ARCHITECTURE Structural OF rp_top IS
   );
   END COMPONENT;
 
-  --------------------------------------------------------------------------------
+  
   COMPONENT cnt_bin
   PORT (
        SRST : in STD_LOGIC;
@@ -49,7 +49,7 @@ ARCHITECTURE Structural OF rp_top IS
   SIGNAL cnt_sig : STD_LOGIC_VECTOR (31 downto 0) := (OTHERS => '0');
 
 BEGIN
-  --------------------------------------------------------------------------------
+  
   --
   --       DIG 1       DIG 2       DIG 3       DIG 4
   --                                       L3
@@ -62,7 +62,7 @@ BEGIN
   --       -----  o    -----  o    -----  o    -----  o
   --             DP1         DP2         DP3         DP4
   --
-  --------------------------------------------------------------------------------
+  
 
   seg_disp_driver_i : seg_disp_driver
   PORT MAP (
@@ -77,7 +77,7 @@ BEGIN
     DISP_DIG            => DISP_DIG
   );
 
-  --------------------------------------------------------------------------------
+  
   cnt_bin_i : cnt_bin
   PORT MAP (
     CLK                  => CLK,

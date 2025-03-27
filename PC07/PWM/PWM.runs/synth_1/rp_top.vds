@@ -1,0 +1,308 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Mar 27 18:09:35 2025
+# Process ID: 4732
+# Current directory: C:/Temp/240703/PLD/PC07/PWM/PWM.runs/synth_1
+# Command line: vivado.exe -log rp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rp_top.tcl
+# Log file: C:/Temp/240703/PLD/PC07/PWM/PWM.runs/synth_1/rp_top.vds
+# Journal file: C:/Temp/240703/PLD/PC07/PWM/PWM.runs/synth_1\vivado.jou
+# Running On: PC-075, OS: Windows, CPU Frequency: 3300 MHz, CPU Physical cores: 4, Host memory: 8538 MB
+#-----------------------------------------------------------
+source rp_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1275.359 ; gain = 23.914
+Command: read_checkpoint -auto_incremental -incremental C:/Temp/240703/PLD/PC07/PWM/PWM.srcs/utils_1/imports/synth_1/rp_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Temp/240703/PLD/PC07/PWM/PWM.srcs/utils_1/imports/synth_1/rp_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top rp_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9136
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1275.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rp_top' [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:16]
+INFO: [Synth 8-3491] module 'pwm_driver' declared at 'C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:35' bound to instance 'pwm_driver_i' of component 'pwm_driver' [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'pwm_driver' [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:51]
+WARNING: [Synth 8-614] signal 'PWM_REF_7' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_6' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_5' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_4' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_3' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_2' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_1' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+WARNING: [Synth 8-614] signal 'PWM_REF_0' is read in the process but is not in the sensitivity list [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'pwm_driver' (0#1) [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:51]
+	Parameter G_DIV_FACT bound to: 5000000 - type: integer 
+INFO: [Synth 8-3491] module 'ce_gen' declared at 'C:/Temp/240703/PLD/PC07/PWM/src/ce_gen.vhd:6' bound to instance 'ce_gen_i' of component 'ce_gen' [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'ce_gen' [C:/Temp/240703/PLD/PC07/PWM/src/ce_gen.vhd:18]
+	Parameter G_DIV_FACT bound to: 5000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ce_gen' (0#1) [C:/Temp/240703/PLD/PC07/PWM/src/ce_gen.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'rp_top' (0#1) [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:16]
+WARNING: [Synth 8-3848] Net DISP_SEG in module/entity rp_top does not have driver. [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:11]
+WARNING: [Synth 8-3848] Net DISP_DIG in module/entity rp_top does not have driver. [C:/Temp/240703/PLD/PC07/PWM/src/rp_top.vhd:12]
+WARNING: [Synth 8-7129] Port SRST in module ce_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module ce_gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[7] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[6] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[5] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[4] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[4] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module rp_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1275.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1275.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1275.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1275.359 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Temp/240703/PLD/PC06/uart/src/rp_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rp_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rp_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1300.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1300.480 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 's_dir_reg' [C:/Temp/240703/PLD/PC07/PWM/src/pwm_driver.vhd:72]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   23 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 14    
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 16    
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port DISP_SEG[7] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[6] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[5] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[4] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_SEG[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[4] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DISP_DIG[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port BTN[0] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module rp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module rp_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     6|
+|3     |LUT1   |     2|
+|4     |LUT2   |     1|
+|5     |LUT3   |     2|
+|6     |LUT4   |    11|
+|7     |LUT5   |    22|
+|8     |LUT6   |    33|
+|9     |FDRE   |    45|
+|10    |LDC    |     1|
+|11    |IBUF   |     1|
+|12    |OBUF   |     8|
+|13    |OBUFT  |    13|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 1300.480 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1300.480 ; gain = 25.121
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1300.480 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1300.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDC => LDCE: 1 instance 
+
+Synth Design complete, checksum: 93efbb60
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 58 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1300.480 ; gain = 25.121
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Temp/240703/PLD/PC07/PWM/PWM.runs/synth_1/rp_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rp_top_utilization_synth.rpt -pb rp_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 18:10:33 2025...

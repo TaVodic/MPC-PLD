@@ -1,0 +1,2725 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Mar 27 18:11:44 2025
+| Host         : PC-075 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file rp_top_timing_summary_routed.rpt -pb rp_top_timing_summary_routed.pb -rpx rp_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : rp_top
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                     Violations  
+---------  --------  ------------------------------  ----------  
+LUTAR-1    Warning   LUT drives async reset alert    1           
+TIMING-18  Warning   Missing input or output delay   8           
+TIMING-20  Warning   Non-clocked latch               1           
+LATCH-1    Advisory  Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (5)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (1)
+5. checking no_input_delay (0)
+6. checking no_output_delay (8)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (5)
+------------------------
+ There is 1 register/latch pin with no clock driven by root clock pin: pwm_driver_i/s_shift_reg[0]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: pwm_driver_i/s_shift_reg[1]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: pwm_driver_i/s_shift_reg[2]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: pwm_driver_i/s_shift_reg[3]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: pwm_driver_i/s_shift_reg[4]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (1)
+------------------------------------------------
+ There is 1 pin that is not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (8)
+-------------------------------
+ There are 8 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     13.770        0.000                      0                   72        0.210        0.000                      0                   72        9.500        0.000                       0                    46  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk    {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                13.770        0.000                      0                   72        0.210        0.000                      0                   72        9.500        0.000                       0                    46  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)        clk                         
+(none)                      clk           
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack       13.770ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.210ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             13.770ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        6.187ns  (logic 1.970ns (31.839%)  route 4.217ns (68.161%))
+  Logic Levels:           4  (LDCE=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns = ( 24.913 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     9.887    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150    10.037 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           1.157    11.194    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I3_O)        0.355    11.549 r  pwm_driver_i/PWM_OUT[3]_i_1/O
+                         net (fo=1, routed)           0.000    11.549    pwm_driver_i/p_0_in[3]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555    24.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/C
+                         clock pessimism              0.391    25.303    
+                         clock uncertainty           -0.061    25.242    
+    SLICE_X42Y67         FDRE (Setup_fdre_C_D)        0.077    25.319    pwm_driver_i/PWM_OUT_reg[3]
+  -------------------------------------------------------------------
+                         required time                         25.319    
+                         arrival time                         -11.549    
+  -------------------------------------------------------------------
+                         slack                                 13.770    
+
+Slack (MET) :             14.149ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.812ns  (logic 1.970ns (33.893%)  route 3.842ns (66.107%))
+  Logic Levels:           4  (LDCE=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns = ( 24.913 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     9.887    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150    10.037 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.782    10.819    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I0_O)        0.355    11.174 r  pwm_driver_i/PWM_OUT[4]_i_1/O
+                         net (fo=1, routed)           0.000    11.174    pwm_driver_i/p_0_in[4]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555    24.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/C
+                         clock pessimism              0.391    25.303    
+                         clock uncertainty           -0.061    25.242    
+    SLICE_X42Y67         FDRE (Setup_fdre_C_D)        0.081    25.323    pwm_driver_i/PWM_OUT_reg[4]
+  -------------------------------------------------------------------
+                         required time                         25.323    
+                         arrival time                         -11.174    
+  -------------------------------------------------------------------
+                         slack                                 14.149    
+
+Slack (MET) :             14.433ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.527ns  (logic 1.713ns (30.994%)  route 3.814ns (69.006%))
+  Logic Levels:           4  (LDCE=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns = ( 24.913 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     9.887    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.124    10.011 r  pwm_driver_i/PWM_OUT[7]_i_4/O
+                         net (fo=3, routed)           0.753    10.764    pwm_driver_i/PWM_OUT[7]_i_4_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I1_O)        0.124    10.888 r  pwm_driver_i/PWM_OUT[6]_i_1/O
+                         net (fo=1, routed)           0.000    10.888    pwm_driver_i/p_0_in[6]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555    24.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/C
+                         clock pessimism              0.391    25.303    
+                         clock uncertainty           -0.061    25.242    
+    SLICE_X42Y67         FDRE (Setup_fdre_C_D)        0.079    25.321    pwm_driver_i/PWM_OUT_reg[6]
+  -------------------------------------------------------------------
+                         required time                         25.321    
+                         arrival time                         -10.888    
+  -------------------------------------------------------------------
+                         slack                                 14.433    
+
+Slack (MET) :             14.439ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.517ns  (logic 1.970ns (35.710%)  route 3.547ns (64.290%))
+  Logic Levels:           4  (LDCE=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.911ns = ( 24.911 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     9.887    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150    10.037 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.486    10.523    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I5_O)        0.355    10.878 r  pwm_driver_i/PWM_OUT[1]_i_1/O
+                         net (fo=1, routed)           0.000    10.878    pwm_driver_i/p_0_in[1]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553    24.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/C
+                         clock pessimism              0.391    25.301    
+                         clock uncertainty           -0.061    25.240    
+    SLICE_X42Y68         FDRE (Setup_fdre_C_D)        0.077    25.317    pwm_driver_i/PWM_OUT_reg[1]
+  -------------------------------------------------------------------
+                         required time                         25.317    
+                         arrival time                         -10.878    
+  -------------------------------------------------------------------
+                         slack                                 14.439    
+
+Slack (MET) :             14.446ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.514ns  (logic 1.970ns (35.730%)  route 3.544ns (64.270%))
+  Logic Levels:           4  (LDCE=1 LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.911ns = ( 24.911 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     9.887    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150    10.037 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.483    10.520    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I1_O)        0.355    10.875 r  pwm_driver_i/PWM_OUT[2]_i_1/O
+                         net (fo=1, routed)           0.000    10.875    pwm_driver_i/p_0_in[2]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553    24.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/C
+                         clock pessimism              0.391    25.301    
+                         clock uncertainty           -0.061    25.240    
+    SLICE_X42Y68         FDRE (Setup_fdre_C_D)        0.081    25.321    pwm_driver_i/PWM_OUT_reg[2]
+  -------------------------------------------------------------------
+                         required time                         25.321    
+                         arrival time                         -10.875    
+  -------------------------------------------------------------------
+                         slack                                 14.446    
+
+Slack (MET) :             14.673ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.287ns  (logic 1.713ns (32.399%)  route 3.574ns (67.601%))
+  Logic Levels:           4  (LDCE=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns = ( 24.913 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.757     9.429    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     9.553 r  pwm_driver_i/PWM_OUT[7]_i_2/O
+                         net (fo=4, routed)           0.972    10.524    pwm_driver_i/PWM_OUT[7]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I0_O)        0.124    10.648 r  pwm_driver_i/PWM_OUT[7]_i_1/O
+                         net (fo=1, routed)           0.000    10.648    pwm_driver_i/p_0_in[7]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555    24.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/C
+                         clock pessimism              0.391    25.303    
+                         clock uncertainty           -0.061    25.242    
+    SLICE_X42Y67         FDRE (Setup_fdre_C_D)        0.079    25.321    pwm_driver_i/PWM_OUT_reg[7]
+  -------------------------------------------------------------------
+                         required time                         25.321    
+                         arrival time                         -10.648    
+  -------------------------------------------------------------------
+                         slack                                 14.673    
+
+Slack (MET) :             14.808ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_counter_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.153ns  (logic 1.014ns (19.679%)  route 4.139ns (80.321%))
+  Logic Levels:           4  (LUT6=4)
+  Clock Path Skew:        -0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.910ns = ( 24.910 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.355ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.721     5.355    pwm_driver_i/CLK
+    SLICE_X38Y72         FDRE                                         r  pwm_driver_i/s_counter_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y72         FDRE (Prop_fdre_C_Q)         0.518     5.873 f  pwm_driver_i/s_counter_reg[4]/Q
+                         net (fo=15, routed)          1.355     7.228    pwm_driver_i/s_counter[4]
+    SLICE_X40Y71         LUT6 (Prop_lut6_I1_O)        0.124     7.352 r  pwm_driver_i/PWM_OUT[7]_i_18/O
+                         net (fo=3, routed)           1.025     8.376    pwm_driver_i/PWM_OUT[7]_i_18_n_0
+    SLICE_X41Y70         LUT6 (Prop_lut6_I1_O)        0.124     8.500 r  pwm_driver_i/PWM_OUT[1]_i_3/O
+                         net (fo=1, routed)           0.797     9.298    pwm_driver_i/PWM_OUT[1]_i_3_n_0
+    SLICE_X41Y69         LUT6 (Prop_lut6_I0_O)        0.124     9.422 r  pwm_driver_i/PWM_OUT[1]_i_2/O
+                         net (fo=2, routed)           0.962    10.384    pwm_driver_i/PWM_OUT[1]_i_2_n_0
+    SLICE_X42Y69         LUT6 (Prop_lut6_I3_O)        0.124    10.508 r  pwm_driver_i/PWM_OUT[0]_i_1/O
+                         net (fo=1, routed)           0.000    10.508    pwm_driver_i/p_0_in[0]
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552    24.910    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+                         clock pessimism              0.391    25.300    
+                         clock uncertainty           -0.061    25.239    
+    SLICE_X42Y69         FDRE (Setup_fdre_C_D)        0.077    25.316    pwm_driver_i/PWM_OUT_reg[0]
+  -------------------------------------------------------------------
+                         required time                         25.316    
+                         arrival time                         -10.508    
+  -------------------------------------------------------------------
+                         slack                                 14.808    
+
+Slack (MET) :             14.815ns  (required time - arrival time)
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        5.143ns  (logic 1.713ns (33.308%)  route 3.430ns (66.692%))
+  Logic Levels:           4  (LDCE=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.911ns = ( 24.911 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.391ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 f  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 r  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE (SetClr_ldce_CLR_Q)     0.885     8.672 f  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.835     9.507    pwm_driver_i/s_dir
+    SLICE_X42Y69         LUT5 (Prop_lut5_I2_O)        0.124     9.631 r  pwm_driver_i/PWM_OUT[6]_i_2/O
+                         net (fo=4, routed)           0.749    10.380    pwm_driver_i/PWM_OUT[6]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I3_O)        0.124    10.504 r  pwm_driver_i/PWM_OUT[5]_i_1/O
+                         net (fo=1, routed)           0.000    10.504    pwm_driver_i/p_0_in[5]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553    24.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/C
+                         clock pessimism              0.391    25.301    
+                         clock uncertainty           -0.061    25.240    
+    SLICE_X42Y68         FDRE (Setup_fdre_C_D)        0.079    25.319    pwm_driver_i/PWM_OUT_reg[5]
+  -------------------------------------------------------------------
+                         required time                         25.319    
+                         arrival time                         -10.504    
+  -------------------------------------------------------------------
+                         slack                                 14.815    
+
+Slack (MET) :             15.381ns  (required time - arrival time)
+  Source:                 ce_gen_i/cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ce_gen_i/cnt_reg[21]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.004ns  (logic 0.766ns (19.130%)  route 3.238ns (80.870%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.910ns = ( 24.910 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.367ns
+    Clock Pessimism Removal (CPR):    0.428ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.733     5.367    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y63         FDRE                                         r  ce_gen_i/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y63         FDRE (Prop_fdre_C_Q)         0.518     5.885 f  ce_gen_i/cnt_reg[3]/Q
+                         net (fo=2, routed)           1.287     7.172    ce_gen_i/cnt[3]
+    SLICE_X39Y63         LUT5 (Prop_lut5_I0_O)        0.124     7.296 f  ce_gen_i/cnt[22]_i_4/O
+                         net (fo=1, routed)           1.090     8.387    ce_gen_i/cnt[22]_i_4_n_0
+    SLICE_X39Y66         LUT6 (Prop_lut6_I5_O)        0.124     8.511 r  ce_gen_i/cnt[22]_i_1/O
+                         net (fo=23, routed)          0.861     9.371    ce_gen_i/cnt[22]_i_1_n_0
+    SLICE_X38Y68         FDRE                                         r  ce_gen_i/cnt_reg[21]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552    24.910    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y68         FDRE                                         r  ce_gen_i/cnt_reg[21]/C
+                         clock pessimism              0.428    25.337    
+                         clock uncertainty           -0.061    25.276    
+    SLICE_X38Y68         FDRE (Setup_fdre_C_R)       -0.524    24.752    ce_gen_i/cnt_reg[21]
+  -------------------------------------------------------------------
+                         required time                         24.752    
+                         arrival time                          -9.371    
+  -------------------------------------------------------------------
+                         slack                                 15.381    
+
+Slack (MET) :             15.381ns  (required time - arrival time)
+  Source:                 ce_gen_i/cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ce_gen_i/cnt_reg[22]/R
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk rise@20.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.004ns  (logic 0.766ns (19.130%)  route 3.238ns (80.870%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.910ns = ( 24.910 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.367ns
+    Clock Pessimism Removal (CPR):    0.428ns
+  Clock Uncertainty:      0.061ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.733     5.367    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y63         FDRE                                         r  ce_gen_i/cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y63         FDRE (Prop_fdre_C_Q)         0.518     5.885 f  ce_gen_i/cnt_reg[3]/Q
+                         net (fo=2, routed)           1.287     7.172    ce_gen_i/cnt[3]
+    SLICE_X39Y63         LUT5 (Prop_lut5_I0_O)        0.124     7.296 f  ce_gen_i/cnt[22]_i_4/O
+                         net (fo=1, routed)           1.090     8.387    ce_gen_i/cnt[22]_i_4_n_0
+    SLICE_X39Y66         LUT6 (Prop_lut6_I5_O)        0.124     8.511 r  ce_gen_i/cnt[22]_i_1/O
+                         net (fo=23, routed)          0.861     9.371    ce_gen_i/cnt[22]_i_1_n_0
+    SLICE_X38Y68         FDRE                                         r  ce_gen_i/cnt_reg[22]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       20.000    20.000 r  
+    H16                                               0.000    20.000 r  CLK (IN)
+                         net (fo=0)                   0.000    20.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    21.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880    23.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    23.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552    24.910    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y68         FDRE                                         r  ce_gen_i/cnt_reg[22]/C
+                         clock pessimism              0.428    25.337    
+                         clock uncertainty           -0.061    25.276    
+    SLICE_X38Y68         FDRE (Setup_fdre_C_R)       -0.524    24.752    ce_gen_i/cnt_reg[22]
+  -------------------------------------------------------------------
+                         required time                         24.752    
+                         arrival time                          -9.371    
+  -------------------------------------------------------------------
+                         slack                                 15.381    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.210ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_counter_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_counter_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.343ns  (logic 0.186ns (54.256%)  route 0.157ns (45.744%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.968ns
+    Source Clock Delay      (SCD):    1.454ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.576     1.454    pwm_driver_i/CLK
+    SLICE_X39Y72         FDRE                                         r  pwm_driver_i/s_counter_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y72         FDRE (Prop_fdre_C_Q)         0.141     1.595 r  pwm_driver_i/s_counter_reg[5]/Q
+                         net (fo=15, routed)          0.157     1.752    pwm_driver_i/s_counter[5]
+    SLICE_X38Y72         LUT6 (Prop_lut6_I1_O)        0.045     1.797 r  pwm_driver_i/s_counter[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.797    pwm_driver_i/s_counter_0[4]
+    SLICE_X38Y72         FDRE                                         r  pwm_driver_i/s_counter_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.843     1.968    pwm_driver_i/CLK
+    SLICE_X38Y72         FDRE                                         r  pwm_driver_i/s_counter_reg[4]/C
+                         clock pessimism             -0.501     1.467    
+    SLICE_X38Y72         FDRE (Hold_fdre_C_D)         0.120     1.587    pwm_driver_i/s_counter_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.587    
+                         arrival time                           1.797    
+  -------------------------------------------------------------------
+                         slack                                  0.210    
+
+Slack (MET) :             0.212ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_shift_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.368ns  (logic 0.186ns (50.577%)  route 0.182ns (49.423%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.973ns
+    Source Clock Delay      (SCD):    1.456ns
+    Clock Pessimism Removal (CPR):    0.481ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.578     1.456    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y69         FDRE (Prop_fdre_C_Q)         0.141     1.597 r  pwm_driver_i/s_shift_reg[4]/Q
+                         net (fo=15, routed)          0.182     1.779    pwm_driver_i/s_shift_reg[4]
+    SLICE_X42Y69         LUT6 (Prop_lut6_I2_O)        0.045     1.824 r  pwm_driver_i/PWM_OUT[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.824    pwm_driver_i/p_0_in[0]
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.848     1.973    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+                         clock pessimism             -0.481     1.492    
+    SLICE_X42Y69         FDRE (Hold_fdre_C_D)         0.120     1.612    pwm_driver_i/PWM_OUT_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.612    
+                         arrival time                           1.824    
+  -------------------------------------------------------------------
+                         slack                                  0.212    
+
+Slack (MET) :             0.228ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_shift_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/PWM_OUT_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.385ns  (logic 0.186ns (48.296%)  route 0.199ns (51.704%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.974ns
+    Source Clock Delay      (SCD):    1.457ns
+    Clock Pessimism Removal (CPR):    0.481ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.579     1.457    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.141     1.598 r  pwm_driver_i/s_shift_reg[3]/Q
+                         net (fo=14, routed)          0.199     1.797    pwm_driver_i/s_shift_reg[3]
+    SLICE_X42Y68         LUT6 (Prop_lut6_I4_O)        0.045     1.842 r  pwm_driver_i/PWM_OUT[5]_i_1/O
+                         net (fo=1, routed)           0.000     1.842    pwm_driver_i/p_0_in[5]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.849     1.974    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/C
+                         clock pessimism             -0.481     1.493    
+    SLICE_X42Y68         FDRE (Hold_fdre_C_D)         0.121     1.614    pwm_driver_i/PWM_OUT_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.614    
+                         arrival time                           1.842    
+  -------------------------------------------------------------------
+                         slack                                  0.228    
+
+Slack (MET) :             0.237ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_shift_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_shift_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.359ns  (logic 0.189ns (52.713%)  route 0.170ns (47.287%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.972ns
+    Source Clock Delay      (SCD):    1.456ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.578     1.456    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y69         FDRE (Prop_fdre_C_Q)         0.141     1.597 r  pwm_driver_i/s_shift_reg[4]/Q
+                         net (fo=15, routed)          0.170     1.767    pwm_driver_i/s_shift_reg[4]
+    SLICE_X39Y68         LUT4 (Prop_lut4_I0_O)        0.048     1.815 r  pwm_driver_i/s_shift[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.815    pwm_driver_i/p_0_in__0[2]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.847     1.972    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/C
+                         clock pessimism             -0.501     1.471    
+    SLICE_X39Y68         FDRE (Hold_fdre_C_D)         0.107     1.578    pwm_driver_i/s_shift_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.578    
+                         arrival time                           1.815    
+  -------------------------------------------------------------------
+                         slack                                  0.237    
+
+Slack (MET) :             0.241ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_shift_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_shift_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.333ns  (logic 0.186ns (55.926%)  route 0.147ns (44.074%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.971ns
+    Source Clock Delay      (SCD):    1.456ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.578     1.456    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y69         FDRE (Prop_fdre_C_Q)         0.141     1.597 r  pwm_driver_i/s_shift_reg[4]/Q
+                         net (fo=15, routed)          0.147     1.744    pwm_driver_i/s_shift_reg[4]
+    SLICE_X39Y69         LUT6 (Prop_lut6_I0_O)        0.045     1.789 r  pwm_driver_i/s_shift[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.789    pwm_driver_i/p_0_in__0[4]
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.846     1.971    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[0]/C
+                         clock pessimism             -0.515     1.456    
+    SLICE_X39Y69         FDRE (Hold_fdre_C_D)         0.092     1.548    pwm_driver_i/s_shift_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.548    
+                         arrival time                           1.789    
+  -------------------------------------------------------------------
+                         slack                                  0.241    
+
+Slack (MET) :             0.248ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_counter_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_counter_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.400ns  (logic 0.186ns (46.549%)  route 0.214ns (53.451%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.032ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.969ns
+    Source Clock Delay      (SCD):    1.456ns
+    Clock Pessimism Removal (CPR):    0.481ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.578     1.456    pwm_driver_i/CLK
+    SLICE_X41Y71         FDRE                                         r  pwm_driver_i/s_counter_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y71         FDRE (Prop_fdre_C_Q)         0.141     1.597 f  pwm_driver_i/s_counter_reg[1]/Q
+                         net (fo=16, routed)          0.214     1.811    pwm_driver_i/s_counter[1]
+    SLICE_X38Y71         LUT6 (Prop_lut6_I3_O)        0.045     1.856 r  pwm_driver_i/s_counter[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.856    pwm_driver_i/s_counter_0[2]
+    SLICE_X38Y71         FDRE                                         r  pwm_driver_i/s_counter_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.844     1.969    pwm_driver_i/CLK
+    SLICE_X38Y71         FDRE                                         r  pwm_driver_i/s_counter_reg[2]/C
+                         clock pessimism             -0.481     1.488    
+    SLICE_X38Y71         FDRE (Hold_fdre_C_D)         0.120     1.608    pwm_driver_i/s_counter_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.608    
+                         arrival time                           1.856    
+  -------------------------------------------------------------------
+                         slack                                  0.248    
+
+Slack (MET) :             0.250ns  (arrival time - required time)
+  Source:                 pwm_driver_i/s_shift_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_shift_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.356ns  (logic 0.186ns (52.314%)  route 0.170ns (47.686%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.972ns
+    Source Clock Delay      (SCD):    1.456ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.578     1.456    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y69         FDRE (Prop_fdre_C_Q)         0.141     1.597 r  pwm_driver_i/s_shift_reg[4]/Q
+                         net (fo=15, routed)          0.170     1.767    pwm_driver_i/s_shift_reg[4]
+    SLICE_X39Y68         LUT5 (Prop_lut5_I0_O)        0.045     1.812 r  pwm_driver_i/s_shift[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.812    pwm_driver_i/p_0_in__0[3]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.847     1.972    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+                         clock pessimism             -0.501     1.471    
+    SLICE_X39Y68         FDRE (Hold_fdre_C_D)         0.091     1.562    pwm_driver_i/s_shift_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.562    
+                         arrival time                           1.812    
+  -------------------------------------------------------------------
+                         slack                                  0.250    
+
+Slack (MET) :             0.265ns  (arrival time - required time)
+  Source:                 ce_gen_i/cnt_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ce_gen_i/cnt_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.399ns  (logic 0.274ns (68.589%)  route 0.125ns (31.411%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    1.460ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.582     1.460    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y64         FDRE                                         r  ce_gen_i/cnt_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y64         FDRE (Prop_fdre_C_Q)         0.164     1.624 r  ce_gen_i/cnt_reg[7]/Q
+                         net (fo=2, routed)           0.125     1.750    ce_gen_i/cnt[7]
+    SLICE_X38Y64         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.110     1.860 r  ce_gen_i/cnt0_carry__0/O[2]
+                         net (fo=1, routed)           0.000     1.860    ce_gen_i/cnt0_carry__0_n_5
+    SLICE_X38Y64         FDRE                                         r  ce_gen_i/cnt_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.851     1.976    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y64         FDRE                                         r  ce_gen_i/cnt_reg[7]/C
+                         clock pessimism             -0.516     1.460    
+    SLICE_X38Y64         FDRE (Hold_fdre_C_D)         0.134     1.594    ce_gen_i/cnt_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.594    
+                         arrival time                           1.860    
+  -------------------------------------------------------------------
+                         slack                                  0.265    
+
+Slack (MET) :             0.265ns  (arrival time - required time)
+  Source:                 ce_gen_i/cnt_reg[15]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ce_gen_i/cnt_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.399ns  (logic 0.274ns (68.589%)  route 0.125ns (31.411%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.974ns
+    Source Clock Delay      (SCD):    1.459ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.581     1.459    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y66         FDRE                                         r  ce_gen_i/cnt_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y66         FDRE (Prop_fdre_C_Q)         0.164     1.623 r  ce_gen_i/cnt_reg[15]/Q
+                         net (fo=2, routed)           0.125     1.749    ce_gen_i/cnt[15]
+    SLICE_X38Y66         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.110     1.859 r  ce_gen_i/cnt0_carry__2/O[2]
+                         net (fo=1, routed)           0.000     1.859    ce_gen_i/cnt0_carry__2_n_5
+    SLICE_X38Y66         FDRE                                         r  ce_gen_i/cnt_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.849     1.974    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y66         FDRE                                         r  ce_gen_i/cnt_reg[15]/C
+                         clock pessimism             -0.515     1.459    
+    SLICE_X38Y66         FDRE (Hold_fdre_C_D)         0.134     1.593    ce_gen_i/cnt_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.593    
+                         arrival time                           1.859    
+  -------------------------------------------------------------------
+                         slack                                  0.265    
+
+Slack (MET) :             0.265ns  (arrival time - required time)
+  Source:                 ce_gen_i/cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ce_gen_i/cnt_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.399ns  (logic 0.274ns (68.589%)  route 0.125ns (31.411%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.973ns
+    Source Clock Delay      (SCD):    1.458ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.580     1.458    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y67         FDRE                                         r  ce_gen_i/cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y67         FDRE (Prop_fdre_C_Q)         0.164     1.622 r  ce_gen_i/cnt_reg[19]/Q
+                         net (fo=2, routed)           0.125     1.748    ce_gen_i/cnt[19]
+    SLICE_X38Y67         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.110     1.858 r  ce_gen_i/cnt0_carry__3/O[2]
+                         net (fo=1, routed)           0.000     1.858    ce_gen_i/cnt0_carry__3_n_5
+    SLICE_X38Y67         FDRE                                         r  ce_gen_i/cnt_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.848     1.973    ce_gen_i/CLK_IBUF_BUFG
+    SLICE_X38Y67         FDRE                                         r  ce_gen_i/cnt_reg[19]/C
+                         clock pessimism             -0.515     1.458    
+    SLICE_X38Y67         FDRE (Hold_fdre_C_D)         0.134     1.592    ce_gen_i/cnt_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.592    
+                         arrival time                           1.858    
+  -------------------------------------------------------------------
+                         slack                                  0.265    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { CLK }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         20.000      17.845     BUFGCTRL_X0Y16  CLK_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X39Y67    ce_gen_i/CE_O_reg/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X39Y64    ce_gen_i/cnt_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y65    ce_gen_i/cnt_reg[10]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y65    ce_gen_i/cnt_reg[11]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y65    ce_gen_i/cnt_reg[12]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y66    ce_gen_i/cnt_reg[13]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y66    ce_gen_i/cnt_reg[14]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y66    ce_gen_i/cnt_reg[15]/C
+Min Period        n/a     FDRE/C   n/a            1.000         20.000      19.000     SLICE_X38Y66    ce_gen_i/cnt_reg[16]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y67    ce_gen_i/CE_O_reg/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y67    ce_gen_i/CE_O_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y64    ce_gen_i/cnt_reg[0]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y64    ce_gen_i/cnt_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[10]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[10]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[11]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[11]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[12]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[12]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y67    ce_gen_i/CE_O_reg/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y67    ce_gen_i/CE_O_reg/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y64    ce_gen_i/cnt_reg[0]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X39Y64    ce_gen_i/cnt_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[10]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[10]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[11]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[11]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[12]/C
+High Pulse Width  Fast    FDRE/C   n/a            0.500         10.000      9.500      SLICE_X38Y65    ce_gen_i/cnt_reg[12]/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clk
+  To Clock:  
+
+Max Delay             9 Endpoints
+Min Delay             9 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.416ns  (logic 4.721ns (63.668%)  route 2.694ns (36.332%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.729     5.363    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.518     5.881 r  pwm_driver_i/PWM_OUT_reg[5]/Q
+                         net (fo=1, routed)           2.694     8.576    LED_OBUF[5]
+    G14                  OBUF (Prop_obuf_I_O)         4.203    12.779 r  LED_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    12.779    LED[5]
+    G14                                                               r  LED[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.079ns  (logic 4.747ns (67.063%)  route 2.332ns (32.937%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.729     5.363    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.518     5.881 r  pwm_driver_i/PWM_OUT_reg[1]/Q
+                         net (fo=1, routed)           2.332     8.213    LED_OBUF[1]
+    F17                  OBUF (Prop_obuf_I_O)         4.229    12.442 r  LED_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    12.442    LED[1]
+    F17                                                               r  LED[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.053ns  (logic 4.750ns (67.345%)  route 2.303ns (32.655%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.728     5.362    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y69         FDRE (Prop_fdre_C_Q)         0.518     5.880 r  pwm_driver_i/PWM_OUT_reg[0]/Q
+                         net (fo=1, routed)           2.303     8.184    LED_OBUF[0]
+    F16                  OBUF (Prop_obuf_I_O)         4.232    12.416 r  LED_OBUF[0]_inst/O
+                         net (fo=0)                   0.000    12.416    LED[0]
+    F16                                                               r  LED[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.026ns  (logic 4.749ns (67.591%)  route 2.277ns (32.409%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.731     5.365    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.518     5.883 r  pwm_driver_i/PWM_OUT_reg[6]/Q
+                         net (fo=1, routed)           2.277     8.160    LED_OBUF[6]
+    J15                  OBUF (Prop_obuf_I_O)         4.231    12.391 r  LED_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    12.391    LED[6]
+    J15                                                               r  LED[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.804ns  (logic 4.795ns (70.474%)  route 2.009ns (29.526%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.731     5.365    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.518     5.883 r  pwm_driver_i/PWM_OUT_reg[7]/Q
+                         net (fo=1, routed)           2.009     7.892    LED_OBUF[7]
+    J14                  OBUF (Prop_obuf_I_O)         4.277    12.169 r  LED_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    12.169    LED[7]
+    J14                                                               r  LED[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.668ns  (logic 4.797ns (71.936%)  route 1.871ns (28.064%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.731     5.365    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.518     5.883 r  pwm_driver_i/PWM_OUT_reg[4]/Q
+                         net (fo=1, routed)           1.871     7.755    LED_OBUF[4]
+    K14                  OBUF (Prop_obuf_I_O)         4.279    12.034 r  LED_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    12.034    LED[4]
+    K14                                                               r  LED[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.615ns  (logic 4.743ns (71.707%)  route 1.871ns (28.293%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.729     5.363    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.518     5.881 r  pwm_driver_i/PWM_OUT_reg[2]/Q
+                         net (fo=1, routed)           1.871     7.753    LED_OBUF[2]
+    G15                  OBUF (Prop_obuf_I_O)         4.225    11.978 r  LED_OBUF[2]_inst/O
+                         net (fo=0)                   0.000    11.978    LED[2]
+    G15                                                               r  LED[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.605ns  (logic 4.752ns (71.943%)  route 1.853ns (28.057%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.731     5.365    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.518     5.883 r  pwm_driver_i/PWM_OUT_reg[3]/Q
+                         net (fo=1, routed)           1.853     7.736    LED_OBUF[3]
+    H15                  OBUF (Prop_obuf_I_O)         4.234    11.970 r  LED_OBUF[3]_inst/O
+                         net (fo=0)                   0.000    11.970    LED[3]
+    H15                                                               r  LED[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_dir_reg/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.426ns  (logic 0.580ns (23.910%)  route 1.846ns (76.090%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.727     5.361    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.456     5.817 r  pwm_driver_i/s_shift_reg[1]/Q
+                         net (fo=21, routed)          1.308     7.125    pwm_driver_i/s_shift_reg[1]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I1_O)        0.124     7.249 f  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.538     7.787    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE                                         f  pwm_driver_i/s_dir_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 pwm_driver_i/s_shift_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            pwm_driver_i/s_dir_reg/CLR
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.519ns  (logic 0.186ns (35.866%)  route 0.333ns (64.134%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.579     1.457    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y68         FDRE (Prop_fdre_C_Q)         0.141     1.598 r  pwm_driver_i/s_shift_reg[3]/Q
+                         net (fo=14, routed)          0.152     1.750    pwm_driver_i/s_shift_reg[3]
+    SLICE_X39Y69         LUT5 (Prop_lut5_I0_O)        0.045     1.795 f  pwm_driver_i/s_dir_reg_i_2/O
+                         net (fo=1, routed)           0.181     1.976    pwm_driver_i/s_dir_reg_i_2_n_0
+    SLICE_X40Y69         LDCE                                         f  pwm_driver_i/s_dir_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.493ns  (logic 3.085ns (88.317%)  route 0.408ns (11.683%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.582     1.460    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.164     1.624 r  pwm_driver_i/PWM_OUT_reg[3]/Q
+                         net (fo=1, routed)           0.408     2.032    LED_OBUF[3]
+    H15                  OBUF (Prop_obuf_I_O)         2.921     4.953 r  LED_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     4.953    LED[3]
+    H15                                                               r  LED[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.497ns  (logic 3.076ns (87.976%)  route 0.420ns (12.024%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.581     1.459    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.164     1.623 r  pwm_driver_i/PWM_OUT_reg[2]/Q
+                         net (fo=1, routed)           0.420     2.044    LED_OBUF[2]
+    G15                  OBUF (Prop_obuf_I_O)         2.912     4.956 r  LED_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     4.956    LED[2]
+    G15                                                               r  LED[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.550ns  (logic 3.130ns (88.156%)  route 0.420ns (11.844%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.582     1.460    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.164     1.624 r  pwm_driver_i/PWM_OUT_reg[4]/Q
+                         net (fo=1, routed)           0.420     2.045    LED_OBUF[4]
+    K14                  OBUF (Prop_obuf_I_O)         2.966     5.010 r  LED_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     5.010    LED[4]
+    K14                                                               r  LED[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.610ns  (logic 3.127ns (86.625%)  route 0.483ns (13.375%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.582     1.460    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.164     1.624 r  pwm_driver_i/PWM_OUT_reg[7]/Q
+                         net (fo=1, routed)           0.483     2.107    LED_OBUF[7]
+    J14                  OBUF (Prop_obuf_I_O)         2.963     5.070 r  LED_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     5.070    LED[7]
+    J14                                                               r  LED[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.673ns  (logic 3.082ns (83.908%)  route 0.591ns (16.092%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.582     1.460    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y67         FDRE (Prop_fdre_C_Q)         0.164     1.624 r  pwm_driver_i/PWM_OUT_reg[6]/Q
+                         net (fo=1, routed)           0.591     2.215    LED_OBUF[6]
+    J15                  OBUF (Prop_obuf_I_O)         2.918     5.133 r  LED_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     5.133    LED[6]
+    J15                                                               r  LED[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.702ns  (logic 3.083ns (83.295%)  route 0.618ns (16.705%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.580     1.458    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y69         FDRE (Prop_fdre_C_Q)         0.164     1.622 r  pwm_driver_i/PWM_OUT_reg[0]/Q
+                         net (fo=1, routed)           0.618     2.240    LED_OBUF[0]
+    F16                  OBUF (Prop_obuf_I_O)         2.919     5.160 r  LED_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     5.160    LED[0]
+    F16                                                               r  LED[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.727ns  (logic 3.080ns (82.652%)  route 0.647ns (17.348%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.581     1.459    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.164     1.623 r  pwm_driver_i/PWM_OUT_reg[1]/Q
+                         net (fo=1, routed)           0.647     2.270    LED_OBUF[1]
+    F17                  OBUF (Prop_obuf_I_O)         2.916     5.186 r  LED_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     5.186    LED[1]
+    F17                                                               r  LED[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 pwm_driver_i/PWM_OUT_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            LED[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.843ns  (logic 3.055ns (79.488%)  route 0.788ns (20.512%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.581     1.459    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y68         FDRE (Prop_fdre_C_Q)         0.164     1.623 r  pwm_driver_i/PWM_OUT_reg[5]/Q
+                         net (fo=1, routed)           0.788     2.411    LED_OBUF[5]
+    G14                  OBUF (Prop_obuf_I_O)         2.891     5.302 r  LED_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     5.302    LED[5]
+    G14                                                               r  LED[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk
+
+Max Delay            12 Endpoints
+Min Delay            12 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.638ns  (logic 1.266ns (34.803%)  route 2.372ns (65.197%))
+  Logic Levels:           3  (LDCE=1 LUT4=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     1.976    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150     2.126 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           1.157     3.283    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I3_O)        0.355     3.638 r  pwm_driver_i/PWM_OUT[3]_i_1/O
+                         net (fo=1, routed)           0.000     3.638    pwm_driver_i/p_0_in[3]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555     4.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.263ns  (logic 1.266ns (38.803%)  route 1.997ns (61.197%))
+  Logic Levels:           3  (LDCE=1 LUT4=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     1.976    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150     2.126 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.782     2.908    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I0_O)        0.355     3.263 r  pwm_driver_i/PWM_OUT[4]_i_1/O
+                         net (fo=1, routed)           0.000     3.263    pwm_driver_i/p_0_in[4]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555     4.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.977ns  (logic 1.009ns (33.893%)  route 1.968ns (66.107%))
+  Logic Levels:           3  (LDCE=1 LUT4=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     1.976    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.124     2.100 r  pwm_driver_i/PWM_OUT[7]_i_4/O
+                         net (fo=3, routed)           0.753     2.853    pwm_driver_i/PWM_OUT[7]_i_4_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I1_O)        0.124     2.977 r  pwm_driver_i/PWM_OUT[6]_i_1/O
+                         net (fo=1, routed)           0.000     2.977    pwm_driver_i/p_0_in[6]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555     4.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[6]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.967ns  (logic 1.266ns (42.672%)  route 1.701ns (57.328%))
+  Logic Levels:           3  (LDCE=1 LUT4=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     1.976    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150     2.126 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.486     2.612    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I5_O)        0.355     2.967 r  pwm_driver_i/PWM_OUT[1]_i_1/O
+                         net (fo=1, routed)           0.000     2.967    pwm_driver_i/p_0_in[1]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553     4.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.964ns  (logic 1.266ns (42.715%)  route 1.698ns (57.285%))
+  Logic Levels:           3  (LDCE=1 LUT4=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          1.215     1.976    pwm_driver_i/s_dir
+    SLICE_X42Y68         LUT4 (Prop_lut4_I3_O)        0.150     2.126 r  pwm_driver_i/PWM_OUT[4]_i_2/O
+                         net (fo=4, routed)           0.483     2.609    pwm_driver_i/PWM_OUT[4]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I1_O)        0.355     2.964 r  pwm_driver_i/PWM_OUT[2]_i_1/O
+                         net (fo=1, routed)           0.000     2.964    pwm_driver_i/p_0_in[2]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553     4.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.737ns  (logic 1.009ns (36.860%)  route 1.728ns (63.140%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.757     1.518    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     1.642 r  pwm_driver_i/PWM_OUT[7]_i_2/O
+                         net (fo=4, routed)           0.972     2.613    pwm_driver_i/PWM_OUT[7]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I0_O)        0.124     2.737 r  pwm_driver_i/PWM_OUT[7]_i_1/O
+                         net (fo=1, routed)           0.000     2.737    pwm_driver_i/p_0_in[7]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.555     4.913    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.593ns  (logic 1.009ns (38.912%)  route 1.584ns (61.088%))
+  Logic Levels:           3  (LDCE=1 LUT5=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.835     1.596    pwm_driver_i/s_dir
+    SLICE_X42Y69         LUT5 (Prop_lut5_I2_O)        0.124     1.720 r  pwm_driver_i/PWM_OUT[6]_i_2/O
+                         net (fo=4, routed)           0.749     2.469    pwm_driver_i/PWM_OUT[6]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I3_O)        0.124     2.593 r  pwm_driver_i/PWM_OUT[5]_i_1/O
+                         net (fo=1, routed)           0.000     2.593    pwm_driver_i/p_0_in[5]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.553     4.911    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[5]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.318ns  (logic 1.009ns (43.531%)  route 1.309ns (56.469%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.347     1.108    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.124     1.232 r  pwm_driver_i/PWM_OUT[1]_i_2/O
+                         net (fo=2, routed)           0.962     2.194    pwm_driver_i/PWM_OUT[1]_i_2_n_0
+    SLICE_X42Y69         LUT6 (Prop_lut6_I3_O)        0.124     2.318 r  pwm_driver_i/PWM_OUT[0]_i_1/O
+                         net (fo=1, routed)           0.000     2.318    pwm_driver_i/p_0_in[0]
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552     4.910    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.602ns  (logic 0.911ns (56.873%)  route 0.691ns (43.127%))
+  Logic Levels:           2  (LDCE=1 LUT4=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.691     1.452    pwm_driver_i/s_dir
+    SLICE_X39Y68         LUT4 (Prop_lut4_I3_O)        0.150     1.602 r  pwm_driver_i/s_shift[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.602    pwm_driver_i/p_0_in__0[2]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552     4.910    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.576ns  (logic 0.885ns (56.162%)  route 0.691ns (43.838%))
+  Logic Levels:           2  (LDCE=1 LUT5=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.761     0.761 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.691     1.452    pwm_driver_i/s_dir
+    SLICE_X39Y68         LUT5 (Prop_lut5_I3_O)        0.124     1.576 r  pwm_driver_i/s_shift[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.576    pwm_driver_i/p_0_in__0[3]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          1.552     4.910    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.502ns  (logic 0.265ns (52.809%)  route 0.237ns (47.191%))
+  Logic Levels:           2  (LDCE=1 LUT3=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.237     0.457    pwm_driver_i/s_dir
+    SLICE_X39Y68         LUT3 (Prop_lut3_I1_O)        0.045     0.502 r  pwm_driver_i/s_shift[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.502    pwm_driver_i/p_0_in__0[1]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.847     1.972    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[3]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.545ns  (logic 0.265ns (48.617%)  route 0.280ns (51.383%))
+  Logic Levels:           2  (LDCE=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.280     0.500    pwm_driver_i/s_dir
+    SLICE_X39Y69         LUT6 (Prop_lut6_I4_O)        0.045     0.545 r  pwm_driver_i/s_shift[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.545    pwm_driver_i/p_0_in__0[4]
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.846     1.971    pwm_driver_i/CLK
+    SLICE_X39Y69         FDRE                                         r  pwm_driver_i/s_shift_reg[0]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.554ns  (logic 0.265ns (47.851%)  route 0.289ns (52.149%))
+  Logic Levels:           2  (LDCE=1 LUT5=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.289     0.509    pwm_driver_i/s_dir
+    SLICE_X39Y68         LUT5 (Prop_lut5_I3_O)        0.045     0.554 r  pwm_driver_i/s_shift[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.554    pwm_driver_i/p_0_in__0[3]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.847     1.972    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[1]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/s_shift_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.555ns  (logic 0.266ns (47.945%)  route 0.289ns (52.055%))
+  Logic Levels:           2  (LDCE=1 LUT4=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.289     0.509    pwm_driver_i/s_dir
+    SLICE_X39Y68         LUT4 (Prop_lut4_I3_O)        0.046     0.555 r  pwm_driver_i/s_shift[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.555    pwm_driver_i/p_0_in__0[2]
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.847     1.972    pwm_driver_i/CLK
+    SLICE_X39Y68         FDRE                                         r  pwm_driver_i/s_shift_reg[2]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.647ns  (logic 0.310ns (47.878%)  route 0.337ns (52.122%))
+  Logic Levels:           3  (LDCE=1 LUT5=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.225     0.445    pwm_driver_i/s_dir
+    SLICE_X42Y70         LUT5 (Prop_lut5_I4_O)        0.045     0.490 r  pwm_driver_i/PWM_OUT[0]_i_2/O
+                         net (fo=1, routed)           0.112     0.602    pwm_driver_i/PWM_OUT[0]_i_2_n_0
+    SLICE_X42Y69         LUT6 (Prop_lut6_I0_O)        0.045     0.647 r  pwm_driver_i/PWM_OUT[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.647    pwm_driver_i/p_0_in[0]
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.848     1.973    pwm_driver_i/CLK
+    SLICE_X42Y69         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[0]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.712ns  (logic 0.310ns (43.539%)  route 0.402ns (56.461%))
+  Logic Levels:           3  (LDCE=1 LUT5=1 LUT6=1)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.263     0.483    pwm_driver_i/s_dir
+    SLICE_X42Y69         LUT5 (Prop_lut5_I0_O)        0.045     0.528 r  pwm_driver_i/PWM_OUT[7]_i_5/O
+                         net (fo=1, routed)           0.139     0.667    pwm_driver_i/PWM_OUT[7]_i_5_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I5_O)        0.045     0.712 r  pwm_driver_i/PWM_OUT[7]_i_1/O
+                         net (fo=1, routed)           0.000     0.712    pwm_driver_i/p_0_in[7]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.850     1.975    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[7]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.736ns  (logic 0.310ns (42.144%)  route 0.426ns (57.856%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.308     0.528    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.045     0.573 r  pwm_driver_i/PWM_OUT[5]_i_2/O
+                         net (fo=4, routed)           0.118     0.691    pwm_driver_i/PWM_OUT[5]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I5_O)        0.045     0.736 r  pwm_driver_i/PWM_OUT[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.736    pwm_driver_i/p_0_in[2]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.849     1.974    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[2]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.757ns  (logic 0.310ns (40.962%)  route 0.447ns (59.038%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.169     0.389    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.045     0.434 r  pwm_driver_i/PWM_OUT[3]_i_2/O
+                         net (fo=4, routed)           0.278     0.712    pwm_driver_i/PWM_OUT[3]_i_2_n_0
+    SLICE_X42Y68         LUT6 (Prop_lut6_I1_O)        0.045     0.757 r  pwm_driver_i/PWM_OUT[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.757    pwm_driver_i/p_0_in[1]
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.849     1.974    pwm_driver_i/CLK
+    SLICE_X42Y68         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[1]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.778ns  (logic 0.310ns (39.854%)  route 0.468ns (60.146%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.169     0.389    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.045     0.434 r  pwm_driver_i/PWM_OUT[3]_i_2/O
+                         net (fo=4, routed)           0.299     0.733    pwm_driver_i/PWM_OUT[3]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I0_O)        0.045     0.778 r  pwm_driver_i/PWM_OUT[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.778    pwm_driver_i/p_0_in[3]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.850     1.975    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[3]/C
+
+Slack:                    inf
+  Source:                 pwm_driver_i/s_dir_reg/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_driver_i/PWM_OUT_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.798ns  (logic 0.310ns (38.864%)  route 0.488ns (61.136%))
+  Logic Levels:           3  (LDCE=1 LUT6=2)
+  Clock Uncertainty:      0.056ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.100ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y69         LDCE                         0.000     0.000 r  pwm_driver_i/s_dir_reg/G
+    SLICE_X40Y69         LDCE (EnToQ_ldce_G_Q)        0.220     0.220 r  pwm_driver_i/s_dir_reg/Q
+                         net (fo=15, routed)          0.308     0.528    pwm_driver_i/s_dir
+    SLICE_X41Y69         LUT6 (Prop_lut6_I4_O)        0.045     0.573 r  pwm_driver_i/PWM_OUT[5]_i_2/O
+                         net (fo=4, routed)           0.180     0.753    pwm_driver_i/PWM_OUT[5]_i_2_n_0
+    SLICE_X42Y67         LUT6 (Prop_lut6_I3_O)        0.045     0.798 r  pwm_driver_i/PWM_OUT[4]_i_1/O
+                         net (fo=1, routed)           0.000     0.798    pwm_driver_i/p_0_in[4]
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+    H16                                               0.000     0.000 r  CLK (IN)
+                         net (fo=0)                   0.000     0.000    CLK
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  CLK_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    CLK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  CLK_IBUF_BUFG_inst/O
+                         net (fo=45, routed)          0.850     1.975    pwm_driver_i/CLK
+    SLICE_X42Y67         FDRE                                         r  pwm_driver_i/PWM_OUT_reg[4]/C
+
+
+
+
+
