@@ -1,0 +1,278 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr  3 09:29:32 2025
+# Process ID: 1008
+# Current directory: C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1
+# Command line: vivado.exe -log rp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rp_top.tcl
+# Log file: C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/rp_top.vds
+# Journal file: C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1\vivado.jou
+# Running On: PC-075, OS: Windows, CPU Frequency: 3300 MHz, CPU Physical cores: 4, Host memory: 8538 MB
+#-----------------------------------------------------------
+source rp_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1275.078 ; gain = 23.914
+Command: synth_design -top rp_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2156
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1275.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rp_top' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:16]
+INFO: [Synth 8-3491] module 'ila_0' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/ila_0_stub.vhdl:5' bound to instance 'ILA_PWM_i' of component 'ila_0' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/ila_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'VIO_PWM' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/VIO_PWM_stub.vhdl:5' bound to instance 'VIO_PWM_i' of component 'VIO_PWM' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'VIO_PWM' [C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/VIO_PWM_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'seg_disp_driver' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/seg_disp_driver_stub.vhdl:5' bound to instance 'seg_disp_driver_i' of component 'seg_disp_driver' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:195]
+INFO: [Synth 8-638] synthesizing module 'seg_disp_driver' [C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/realtime/seg_disp_driver_stub.vhdl:20]
+	Parameter G_DIV_FACT bound to: 500000 - type: integer 
+INFO: [Synth 8-3491] module 'ce_gen' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/ce_gen.vhd:6' bound to instance 'ce_gen_i' of component 'ce_gen' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'ce_gen' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/ce_gen.vhd:18]
+	Parameter G_DIV_FACT bound to: 500000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ce_gen' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/ce_gen.vhd:18]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+INFO: [Synth 8-638] synthesizing module 'btn_in' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:20]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'sync_reg' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/sync_reg.vhd:6' bound to instance 'sync_reg_i' of component 'sync_reg' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'sync_reg' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/sync_reg.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'sync_reg' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/sync_reg.vhd:14]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/debouncer.vhd:6' bound to instance 'debouncer_i' of component 'debouncer' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/debouncer.vhd:18]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/debouncer.vhd:18]
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/edge_detector.vhd:6' bound to instance 'edge_detector_i' of component 'edge_detector' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'edge_detector' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/edge_detector.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'edge_detector' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in/edge_detector.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'btn_in' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:20]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+	Parameter G_DEB_PERIOD bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'btn_in' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/btn_in.vhd:5' bound to instance 'btn_in_i' of component 'btn_in' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+INFO: [Synth 8-3491] module 'pwm_driver' declared at 'C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/pwm_driver.vhd:6' bound to instance 'pwm_driver_i' of component 'pwm_driver' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:247]
+INFO: [Synth 8-638] synthesizing module 'pwm_driver' [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/pwm_driver.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'pwm_driver' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/pwm_driver.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'rp_top' (0#1) [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:16]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'pwm_driver_i'. This will prevent further optimization [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:247]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_btn_in[4].btn_in_i'. This will prevent further optimization [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_btn_in[3].btn_in_i'. This will prevent further optimization [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_btn_in[2].btn_in_i'. This will prevent further optimization [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_btn_in[1].btn_in_i'. This will prevent further optimization [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.vhd:228]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1275.078 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1275.078 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/seg_disp_driver/seg_disp_driver_in_context.xdc] for cell 'seg_disp_driver_i'
+Finished Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/seg_disp_driver/seg_disp_driver_in_context.xdc] for cell 'seg_disp_driver_i'
+Parsing XDC File [c:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/IP/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ILA_PWM_i'
+Finished Parsing XDC File [c:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/IP/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ILA_PWM_i'
+Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/VIO_PWM/VIO_PWM/VIO_PWM_in_context.xdc] for cell 'VIO_PWM_i'
+Finished Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/.Xil/Vivado-1008-PC-075/VIO_PWM/VIO_PWM/VIO_PWM_in_context.xdc] for cell 'VIO_PWM_i'
+Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.xdc]
+Finished Parsing XDC File [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Temp/240703/PLD/PC_07_reference_2025/SOURCES/rp_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rp_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rp_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1324.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1324.824 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for ILA_PWM_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for VIO_PWM_i. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   19 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |ila_0           |         1|
+|2     |VIO_PWM         |         1|
+|3     |seg_disp_driver |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |VIO_PWM_bbox         |     1|
+|2     |ila_0_bbox           |     1|
+|3     |seg_disp_driver_bbox |     1|
+|4     |BUFG                 |     1|
+|5     |CARRY4               |     8|
+|6     |LUT2                 |     3|
+|7     |LUT4                 |    64|
+|8     |LUT6                 |     8|
+|9     |FDRE                 |    28|
+|10    |IBUF                 |     9|
+|11    |OBUF                 |    21|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1324.824 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1324.824 ; gain = 49.746
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1324.824 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1324.824 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b2f313f8
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1324.824 ; gain = 49.746
+INFO: [Common 17-1381] The checkpoint 'C:/Temp/240703/PLD/PC_07_reference_2025/PC_07.runs/synth_1/rp_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file rp_top_utilization_synth.rpt -pb rp_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  3 09:30:27 2025...
