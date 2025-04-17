@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Apr 17 08:35:21 2025
+# Process ID: 12276
+# Current directory: C:/Temp/240703/PLD/PC_10_template_2025
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10332 C:\Temp\240703\PLD\PC_10_template_2025\PC_10.xpr
+# Log file: C:/Temp/240703/PLD/PC_10_template_2025/vivado.log
+# Journal file: C:/Temp/240703/PLD/PC_10_template_2025\vivado.jou
+# Running On: PC-075, OS: Windows, CPU Frequency: 3300 MHz, CPU Physical cores: 4, Host memory: 8538 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Temp/240703/PLD/PC_10_template_2025/PC_10.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/pwm_driver.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Temp/240703/PLD/PC_10_template_2025/PC_10.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Temp/240703/PLD/PC_10_template_2025/PC_10.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+add_files -norecurse {C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/ce_gen.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_rx6.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_tx6.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_block.vhd}
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Temp/240703/PLD/PC_10_template_2025/PC_10.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+close_hw_manager
+export_ip_user_files -of_objects  [get_files C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_block.vhd] -no_script -reset -force -quiet
+remove_files  C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_block.vhd
+export_ip_user_files -of_objects  [get_files C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/ce_gen.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_rx6.vhd] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_tx6.vhd] -no_script -reset -force -quiet
+remove_files  {C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/ce_gen.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_rx6.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/UART/uart_tx6.vhd}
+add_files -norecurse {C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/uart_tx.vhd C:/Temp/240703/PLD/PC_10_template_2025/SOURCES/ce_gen.vhd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Temp/240703/PLD/PC_10_template_2025/PC_10.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {C:/Temp/240703/PLD/PC_10_template_2025/PC_10.runs/impl_1/rp_top.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]

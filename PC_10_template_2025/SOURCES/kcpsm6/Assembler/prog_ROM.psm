@@ -1,0 +1,107 @@
+                    ;==============================================================================;
+                    ;
+                    ; Michal Kubicek (michal.kubicek@email.cz)
+                    ;
+                    ;==============================================================================;
+                    ;   __  __       _
+                    ;  |  \/  |     (_)
+                    ;  | \  / | __ _ _ _ __
+                    ;  | |\/| |/ _` | | '_ \
+                    ;  | |  | | (_| | | | | |
+                    ;  |_|  |_|\__,_|_|_| |_|
+                    ;
+                    ;
+                    ;
+                    ;==============================================================================;
+                    ; Startup and workaround for "Vivado Hardware Manager" problem
+                    ;==============================================================================;
+                    ;
+                    JUMP    cold_start                  ; Avoid address 003 on start up
+                    JUMP    cold_start
+                    JUMP    cold_start
+                    JUMP    cold_start                  ; Address 003
+                    ;
+        cold_start: ; simple 7-segment display text
+                    LOAD    s0, 0D
+                    OUTPUT  s0, ID_7SEG_DIG_1
+                    LOAD    s0, 0E
+                    OUTPUT  s0, ID_7SEG_DIG_2
+                    LOAD    s0, 0A
+                    OUTPUT  s0, ID_7SEG_DIG_3
+                    LOAD    s0, 0D
+                    OUTPUT  s0, ID_7SEG_DIG_4
+
+                    LOAD    s0, 00
+                    ;
+                    ;
+                    ;
+                    ;==============================================================================;
+                    ; Main program loop
+                    ;==============================================================================;
+                    ;
+         main_loop: 
+                    ;
+                    ; read status of buttons and switches and forward it to LEDs
+                    ;INPUT   s0, ID_BTN                  ; read state of buttons
+                    ;SL0     s0                          ; 4x shift left
+                    ;SL0     s0
+                    ;SL0     s0
+                    ;SL0     s0
+                    ;INPUT   s1, ID_SW                   ; read state of switches
+                    ;OR      s1, s0                      ; merge 4 BTN and 4 SW to one byte (s1)
+                    ;OUTPUT  s1, ID_LED                  ; lit LED on/off according to SW and BTN           
+
+                    INPUT      s2, ID_BTN                    
+                    COMPARE    s2, 01       
+                    JUMP       NZ, check  
+
+                    LOAD       s1, 00
+                    JUMP       main_loop
+                    
+
+                check:
+                    COMPARE    s1, 01       
+                    JUMP       Z, main_loop
+                    JUMP       send                   
+
+                send:
+                    INPUT s0, ID_TX_BUSY
+                    COMPARE s0, 01
+                    JUMP    Z, send
+
+                    LOAD    s0, 31
+                    OUTPUT  s0, ID_UART_DATA
+                    LOAD    s0, 01
+                    OUTPUT  s0, ID_TX_START
+                    LOAD    s0, 00
+                    OUTPUT  s0, ID_TX_START
+
+                    CALL wait_1s
+
+                    LOAD    s1, 01
+                    JUMP    main_loop
+
+
+
+                    ;
+                    ;               
+                    ;
+                    ; if TXBUSY = 0 {DATA_IN = DATA; TX_START = 1; DELAY, TX_START = 0}
+                    ;
+                    ;==============================================================================;
+                    ; Include other source files
+                    ;==============================================================================;
+                    ;
+                    INCLUDE "prog_ROM_addr.psm"
+                    INCLUDE "prog_ROM_delay.psm"
+                    INCLUDE "prog_ROM_IRQ.psm"
+                    ;
+                    ;
+                    ;==============================================================================;
+                    ; Interrupt jump instruction
+                    ;==============================================================================;
+                    ;
+                    ADDRESS FFF                         ; interrupt
+                    JUMP    IntService                  ; jump to interrupt subroutine address
+                    ;
+                    ;==============================================================================;
