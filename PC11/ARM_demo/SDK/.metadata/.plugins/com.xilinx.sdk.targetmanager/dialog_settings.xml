@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hello_world_system-bitFile" value="${project_loc:hello_world}/_ide/bitstream/rp_zynq_wrapper.bit"/>
+	<item key="hello_world_system-bmmFile" value=""/>
+	<item key="hello_world_system-target" value="Local"/>
+	<item key="hello_world_system-device" value="Auto Detect"/>
+	<item key="hello_world_system-partial_bit" value="false"/>
+	<item key="hello_world_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="hello_world_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-SMT2NC 210308A62566&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-SMT2NC-210308A62566-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-JTAG-SMT2NC-210308A62566-13722093-0&quot;}}]}"/>
+</section>
