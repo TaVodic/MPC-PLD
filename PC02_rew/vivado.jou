@@ -1,0 +1,124 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed May 21 16:26:12 2025
+# Process ID: 2612
+# Current directory: C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25588 C:\Users\Martin\Documents\REPO\MPC-PLD\PC02_rew\PC02_rew.xpr
+# Log file: C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/vivado.log
+# Journal file: C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew\vivado.jou
+# Running On: LENOVO-MT, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 12, Host memory: 14702 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/PC02_rew.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source simple_adder_tb.tcl
+relaunch_sim
+save_wave_config {C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+set_property xsim.view C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+save_wave_config {C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+close_sim
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder.tcl
+update_compile_order -fileset sources_1
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/Martin/Documents/REPO/MPC-PLD/PC02_rew/simple_adder_tb_behav.wcfg
+source simple_adder_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_project
