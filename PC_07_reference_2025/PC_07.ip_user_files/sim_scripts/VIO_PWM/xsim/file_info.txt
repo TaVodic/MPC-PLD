@@ -1,2 +1,0 @@
-VIO_PWM.vhd,vhdl,xil_defaultlib,../../../ip/VIO_PWM/sim/VIO_PWM.vhd,incdir="../../../ip/VIO_PWM/hdl/verilog"incdir="../../../ip/VIO_PWM/hdl"
-glbl.v,Verilog,xil_defaultlib,glbl.v

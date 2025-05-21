@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../SOURCES/SIM/FIR_50k/sim/FIR_50k.vhd" \
-
-nosort

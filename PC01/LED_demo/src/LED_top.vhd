@@ -19,9 +19,11 @@ end LED_top;
 architecture Behavioral of LED_top is
 
 begin
-    LED(0) <= '1' WHEN SW = "1010" AND (BTN = "0001" OR BTN = "1000") ELSE '0';              
+    LED(0) <= '1' WHEN 
+        SW = "1010" AND (BTN = "0001" OR BTN = "1000") 
+        ELSE '0';              
     
-   -- LED(1) <=     BTN(1);
+    --LED(1) <=     BTN(1);
     --LED(2) <= NOT BTN(2);
     
     --LED(7 downto 4) <= "1111";
